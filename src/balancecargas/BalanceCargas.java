@@ -39,17 +39,17 @@ public class BalanceCargas extends Thread {
     }
     public void generarLista(int tam)
     {
-        frame = new ventana(this.nombre, tam);
+        ventana frame = new ventana(this.nombre,tam);
         for(int x = 0 ; x < tam ; x++)
-        {         
+        {
             this.Nodo.add(new Peticion(x));
-            frame.mostrarTabla(x,Nodo.get(x));
+            frame.mostrarTabla(x, Nodo.get(x));
         }
     }
     
     public void run()
     {
-        frame = new ventana(this.nombre, this.tam);
+        frame = new ventana(this.nombre,this.Nodo.size());
         System.out.println("El Balance de Cargas Comienza a procesar El " 
 					+ this.nombre + " en el tiempo : " 
 					+ (System.currentTimeMillis() - this.tiempoInicial) / 1000 
@@ -72,6 +72,7 @@ public class BalanceCargas extends Thread {
                     {
                         this.Nodo.add(this.ListaTotal.get(i));
                         this.ListaTotal.remove(i);
+                        
                         i=-1;                       
                     }
 

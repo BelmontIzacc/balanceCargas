@@ -19,7 +19,8 @@ public class ventana extends javax.swing.JFrame {
     public ventana(String nombre,int tam) 
     {
         initComponents();
-        this.nodo.setText(""+nombre+"\n"+"   #    "+"  ID  "+"  Duracion  \n");
+        String txt= "EL tamaño es de : "+tam;
+        this.nodo.setText(""+nombre+" "+txt+"\n"+"   #    "+"  ID  "+"  Duracion  \n");
         setVisible(true);
     }
     public void mostrarTabla(int num,Peticion p)
