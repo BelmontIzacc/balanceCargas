@@ -16,15 +16,15 @@ public class ventana extends javax.swing.JFrame {
     /**
      * Creates new form ventana
      */
-    public ventana(String nombre) 
+    public ventana(String nombre,int tam) 
     {
         initComponents();
-        this.nodo.setText(""+nombre+"\n"+"  ID  "+"  Duracion  \n");
+        this.nodo.setText(""+nombre+"\n"+"   #    "+"  ID  "+"  Duracion  \n");
         setVisible(true);
     }
-    public void mostrarTabla(Peticion p)
+    public void mostrarTabla(int num,Peticion p)
     {
-        this.nodo.setText(""+this.nodo.getText()+"\n    "+p.getIdentificador()+"    "+p.getTiempo());
+        this.nodo.setText(""+this.nodo.getText()+"\n    "+num+"     "+p.getIdentificador()+"        "+p.getTiempo());
     }
     public void terminar(String mensaje)
     {
